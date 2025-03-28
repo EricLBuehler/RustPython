@@ -1198,8 +1198,6 @@ class ProcessTestCase(BaseTestCase):
             stdout, stderr = popen.communicate(input='')
             self.assertEqual(stdout, '1\n2\n3\n4')
 
-    # TODO: RUSTPYTHON
-    @unittest.expectedFailure
     def test_communicate_errors(self):
         for errors, expected in [
             ('ignore', ''),
@@ -2786,8 +2784,6 @@ class POSIXProcessTestCase(BaseTestCase):
         else:
             self.fail("Expected ValueError or subprocess.SubprocessError")
 
-    # TODO: RUSTPYTHON
-    @unittest.expectedFailure
     def test_undecodable_env(self):
         for key, value in (('test', 'abc\uDCFF'), ('test\uDCFF', '42')):
             encoded_value = value.encode("ascii", "surrogateescape")

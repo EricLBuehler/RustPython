@@ -10,15 +10,14 @@ license.workspace = true
 
 [dependencies]
 # rustpython-parser-core = { workspace = true, features=["location"] }
-ruff_python_ast = { workspace = true }
-ruff_python_parser = { workspace = true }
 ruff_source_file = { workspace = true }
+rustpython-wtf8 = { workspace = true }
 
 bitflags = { workspace = true }
 itertools = { workspace = true }
 malachite-bigint = { workspace = true }
 num-complex = { workspace = true }
-serde = { version = "1.0.217", optional = true, default-features = false, features = ["derive"] }
+serde = { workspace = true, optional = true, default-features = false, features = ["derive"] }
 
 lz4_flex = "0.11"
 

@@ -11,7 +11,9 @@ type IndexSet<T> = indexmap::IndexSet<T, ahash::RandomState>;
 pub mod compile;
 pub mod error;
 pub mod ir;
+mod string_parser;
 pub mod symboltable;
+mod unparse;
 
 pub use compile::CompileOpts;
 use ruff_python_ast::Expr;
